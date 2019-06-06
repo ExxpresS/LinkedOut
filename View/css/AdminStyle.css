@@ -1,0 +1,25 @@
+.adminContent {
+    width: 80% ;
+    float: left;
+}
+
+.fa-edit{
+    margin-right:10%;
+}
+.fa-trash-alt{
+    margin-right:10%;  
+}
+.display-none{
+    display: none;
+}
+.fa-edit:hover{
+    cursor: pointer;
+}
+
+.fa-trash-alt:hover{
+    cursor: pointer;
+}
+
+.fa-check:hover{
+    cursor: pointer;
+}

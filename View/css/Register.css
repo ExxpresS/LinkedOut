@@ -1,0 +1,9 @@
+.error_log{
+    display: none;
+    background: rgb(241, 118, 131);
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 5%;
+}
+    
