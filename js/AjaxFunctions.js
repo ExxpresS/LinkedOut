@@ -51,4 +51,3 @@ function updateUser(id, nom, prenom, tel, mail, pass) {
         }
     });
 }
-

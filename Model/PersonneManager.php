@@ -65,7 +65,7 @@ class PersonneManager extends DBConnection
     public function insertUnePersonne($nom, $prenom, $description, $telephone, $mail, $mdp)
     {
         $description = ($description == NULL)?"NULL" : $description;
-        $requete = "INSERT INTO personne set `nom` = '".$nom."' ,`prenom` = '".$prenom."',`description` = '".$description."',`telephone` = '".$telephone."',`mail` = '".$mail."',`mdp` = '".$mdp."'";
+        $requete = "INSERT INTO personne set `nom` = '".$nom."' ,`prenom` = '".$prenom."',`description` = '".$description."',`telephone` = '".$telephone."',`mail` = '".$mail."',`mdp` = '".hash('sha256', $mdp)."'";
         $query = $this->db->prepare($requete);
         $query->execute();
     }
@@ -84,7 +84,7 @@ class PersonneManager extends DBConnection
    */
     public function updateUnePersonne($idPersonne, $nom, $prenom, $telephone, $mail, $mdp)
     {
-        $requete = "UPDATE `personne` SET `nom` = '". $nom ."', `prenom` = '".$prenom."', `telephone` = '".$telephone."', `mail` = '".$mail."', `mdp` = '".$mdp."' WHERE `personne`.`idPersonne` = ".$idPersonne ;
+        $requete = "UPDATE `personne` SET `nom` = '". $nom ."', `prenom` = '".$prenom."', `telephone` = '".$telephone."', `mail` = '".$mail."', `mdp` = '".hash('sha256', $mdp)."' WHERE `personne`.`idPersonne` = ".$idPersonne ;
         $query = $this->db->prepare($requete);
         $query->execute();
     }

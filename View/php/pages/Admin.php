@@ -10,11 +10,9 @@
         include $_SERVER['DOCUMENT_ROOT'] . '/Controller/GetUserInfos.php';
     ?>
     <div class="adminContent">
-        <?php 
-            
-            
+        <?php       
             echo getUsersInfos();
-            ?>
+        ?>
         
         
     </div>
