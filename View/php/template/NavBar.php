@@ -78,7 +78,7 @@
                         <i class="fa fa-cog" aria-hidden="true"></i>
                      Admin
                      </a>
-                  </li>';
+                  </li>'; 
                 }
             
             

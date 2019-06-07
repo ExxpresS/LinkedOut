@@ -1,3 +1,4 @@
+  
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -29,6 +30,11 @@ $('.fa-edit').click(function () {
     $(this).parent().parent().find('.fa-check').removeClass('display-none');
 });
 
+
+
+///////////////////////////////////////////////
+//              USER
+///////////////////////////////////////////////
 function deleteUser(id) {
 
     $.ajax({
@@ -50,5 +56,42 @@ function updateUser(id, nom, prenom, tel, mail, pass) {
             
         }
     });
+   }
+   
+///////////////////////////////////////////////
+//              Competence
+///////////////////////////////////////////////
+    function getCompetence() {
+        
+        /*
+    $.ajax({
+        type: "POST",
+        url: '../../../Controller/Ajax.php',
+        data: {action: 'getCompetence'},
+        success: function (html) {
+            $(".adminContent").empty().append(html);
+        }
+    });*/
+    }
+    function deleteCompetence(id) {
+
+    $.ajax({
+        type: "POST",
+        url: '../../../Controller/Ajax.php',
+        data: {action: 'deleteCompetence', idUser: id},
+        success: function (html) {
+            
+        }
+    });
 }
 
+function updateCompetence(id, libelle) {
+    $.ajax({
+        type: "POST",
+        url: '../../../Controller/Ajax.php',
+        data: {action: 'updateCompetence', id: id, libelle: libelle},
+        success: function (html) {
+            
+        }
+    });
+}
