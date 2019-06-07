@@ -7,24 +7,55 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li id="home" class="nav-item">
-                <a class="nav-link" href="accueil.php">
-                    <i class="fa fa-home"></i>
-                    Home
-                    <span class="sr-only">(current)</span>
-                </a>
+                <?php
+                if (basename($_SERVER['PHP_SELF'])== "accueil.php"){
+                    echo '<a class="nav-link active" href="accueil.php">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>';
+                }else{
+                    echo '<a class="nav-link" href="accueil.php">
+                            <i class="fa fa-home"></i>
+                            Home
+                        </a>';
+                }
+                
+                ?>
             </li>
 
             <li id="profil" class="nav-item">
-                <a class="nav-link " href="MonProfil.php">
-                    <i class="fa fa-user"> </i>
-                    Mon profil
-                </a>
+                <?php
+                if (basename($_SERVER['PHP_SELF'])== "MonProfil.php"){
+                    echo '<a class="nav-link active" href="MonProfil.php">
+                            <i class="fa fa-user"> </i>
+                            Mon profil
+                         </a>';
+                }else{
+                    echo '<a class="nav-link " href="MonProfil.php">
+                            <i class="fa fa-user"> </i>
+                            Mon profil
+                          </a>';
+                }
+                
+                ?>
+                
             </li>
             <li id="post" class="nav-item">
-                <a class="nav-link" href="Poster.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-plus-circle"></i>
-                    Poster
-                </a>
+                <?php
+                if (basename($_SERVER['PHP_SELF'])== "Poster.php"){
+                    echo '<a class="nav-link active" href="Poster.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                            Poster
+                            </a>';
+                }else{
+                    echo '<a class="nav-link" href="Poster.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-plus-circle"></i>
+                            Poster
+                          </a>';
+                }
+                
+                ?>
+                
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
@@ -34,12 +65,23 @@
             </li>
             <?php
             if(isset($_SESSION['idAdmin'])){
-            echo '<li id="admin" class="nav-item">
+                if (basename($_SERVER['PHP_SELF'])== "Admin.php"){
+                    echo '<li id="admin" class="nav-item active">
                     <a class="nav-link" href="Admin.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                      Admin
                      </a>
                   </li>';
+                }else{
+                    echo '<li id="admin" class="nav-item">
+                    <a class="nav-link" href="Admin.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                     Admin
+                     </a>
+                  </li>';
+                }
+            
+            
             }
             
             ?>
