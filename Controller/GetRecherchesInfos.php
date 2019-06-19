@@ -1,13 +1,11 @@
 <?php
-
     include $_SERVER['DOCUMENT_ROOT'].'/Model/RechercheManager.php';
-    
     
     
 function GetRecherchesInfos()
 {
-    
     $rechercheManager = new RechercheManager();
+    
     $infosRecherchesDb = $rechercheManager->getAllRecherche();
     $offre = "";
    
@@ -39,14 +37,12 @@ function GetRecherchesInfos()
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="card-body">
             <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>' . $value->getDate() . '</div>
             <a class="card-link" href="#">
                 <h5 class="card-title">' . $value->getDescription() . '</h5>
             </a>
-
             <p class="card-text">
                 ' . $value->getDescription() . '
             </p>
@@ -70,7 +66,6 @@ function GetRecherchesInfos()
    
 return $offre;
 } 
-
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

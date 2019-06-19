@@ -1,6 +1,5 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/linkedOut/Model/DBConnection.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/linkedOut/Model/Ecole.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Model/Ecole.php';
 
 class EcoleManager extends DBConnection
 {
@@ -13,13 +12,14 @@ class EcoleManager extends DBConnection
     public  function getAllEcole()
     {
         $lesEcoles = array();
-        $query = $this->db->prepare("SELECT * FROM Ecole");
+        $query = $this->db->prepare("SELECT * FROM ecole");
         $query->execute();
         $datas =  $query->fetchAll();
+     
 
         foreach ($datas as $data) {
             $uneEcole = new Ecole($data["idEcole"],$data["nom"], $data["ville"], $data["lienPhoto"]);
-            array_push($lesEcoles, $uneEcole);
+           array_push($lesEcoles, $uneEcole);
         }
         return $lesEcoles;
     }
@@ -78,5 +78,10 @@ class EcoleManager extends DBConnection
         $query->bindValue(":lienPhoto",$lienPhoto); 
 
         $query->execute();
+    }
+    
+       public function deleteEcole($id){
+        $query = $this->db->prepare("DELETE FROM ecole WHERE idEcole = ".$id);
+        $query->execute();      
     }
 }

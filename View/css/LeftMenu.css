@@ -48,7 +48,7 @@ body {
 .colors .black {
     background: #292929;
 }
-
+/*
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 .jquery-accordion-menu,
 .jquery-accordion-menu * {
@@ -57,7 +57,7 @@ body {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     outline: 0
-}
+}*/
 
 .jquery-accordion-menu {
     width: 20%;

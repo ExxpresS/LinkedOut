@@ -1,10 +1,8 @@
 <?php 
 include $_SERVER['DOCUMENT_ROOT'] . '/Model/DBConnection.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/Model/Annonce.php';
-
 class AnnonceManager extends DBConnection
 {
-
     /**
      * Retourne toutes les Annonces dans un tableau de Annonce
      *
@@ -16,14 +14,12 @@ class AnnonceManager extends DBConnection
         $query = $this->db->prepare("SELECT * FROM annonce");
         $query->execute();
         $datas =  $query->fetchAll();
-
         foreach ($datas as $data) {
             $uneAnnonce = new Annonce($data["idAnnonce"], $data["titre"], $data["description"], $data["poste"], $data["date"], $data["typeEmploi"], $data["niveauEtude"], $data['idRecruteur'], $data['idEntreprise']);
             array_push($lesAnnonces, $uneAnnonce);
         }
         return $lesAnnonces;
     }
-
     /**
      * Retourne une Annonce en fonction de son id 
      *
@@ -39,7 +35,6 @@ class AnnonceManager extends DBConnection
         $uneAnnonce = new Annonce($data["idAnnonce"], $data["titre"], $data["description"], $data["poste"], $data["date"], $data["typeEmploi"], $data["niveauEtude"], $data['idRecruteur'], $data['idEntreprise']);
         return $uneAnnonce;
     }
-
     /**
    * Ajoute une Annonce avec les informations donnés en paramètres
    *
@@ -64,8 +59,6 @@ class AnnonceManager extends DBConnection
         $query->bindValue(":idAnnonce", $idEntreprise);
         $query->execute();
     }
-
-
     /**
    * Ajoute une Annonce avec les informations donnés en paramètres
    *

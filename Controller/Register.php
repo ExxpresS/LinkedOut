@@ -25,7 +25,7 @@ if (isset($_POST['statut']) && isset($_POST['email']) && isset($_POST['pass']) &
         } else if ($statut = "recruteur") {
             $manager->isRecruteur($manager->getLastid());
         }
-    }
+    }   
     header('Location: /View/php/pages/accueil.php');
     exit();
 }    

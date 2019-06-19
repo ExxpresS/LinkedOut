@@ -12,6 +12,7 @@ function GetAnnoncesInfos()
     $offre = "";
    
     foreach ($infosAnnoncesDb as $value) {
+        //var_dump($value);exit();
     $annonceInfo = ' <div class="card gedf-card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
@@ -43,7 +44,7 @@ function GetAnnoncesInfos()
         <div class="card-body">
             <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>' . $value->getDate() . '</div>
             <a class="card-link" href="#">
-                <h5 class="card-title">' . $value->getDescription() . '</h5>
+                <h5 class="card-title">' . $value->getTypeEmploi() . '</h5>
             </a>
 
             <p class="card-text">

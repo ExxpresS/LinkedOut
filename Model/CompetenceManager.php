@@ -1,6 +1,5 @@
 <?php 
-include $_SERVER['DOCUMENT_ROOT'] . '/linkedOut/Model/DBConnection.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/linkedOut/Model/Competence.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/Model/Competence.php';
 
 class CompetenceManager extends DBConnection
 {
@@ -12,15 +11,20 @@ class CompetenceManager extends DBConnection
      */
     public  function getAllCompetence()
     {
+       
+        
         $lesCompetences = array();
-        $query = $this->db->prepare("SELECT * FROM Competence");
+        $query = $this->db->prepare("SELECT * FROM competence");
+       
         $query->execute();
+        
         $datas =  $query->fetchAll();
 
         foreach ($datas as $data) {
             $uneCompetence = new Competence($data["idCompetence"], $data["libelle"]);
             array_push($lesCompetences, $uneCompetence);
         }
+         
         return $lesCompetences;
     }
 
@@ -53,8 +57,8 @@ class CompetenceManager extends DBConnection
    */
     public function insertUneCompetence($libelle)
     {
-        $query = $this->db->prepare("INSERT INTO Competence set `libelle` = :libelle");
-        $query->bindValue(":libelle",$libelle); 
+        $query = $this->db->prepare("INSERT INTO Competence set `libelle` = '$libelle'");
+       
         $query->execute();
     }
 
@@ -67,10 +71,15 @@ class CompetenceManager extends DBConnection
    * @param [String] $libelle
    * @return void
    */
-    public function updateUneCompetence($libelle)
+    public function updateUneCompetence($libelle,$id)
     {
-        $query = $this->db->prepare("UPDATE Competence set `libelle` = :libelle");
-        $query->bindValue(":libelle",$libelle); 
+        $query = $this->db->prepare("UPDATE competence set `libelle` = '$libelle' WHERE `idCompetence` = '$id'");      
         $query->execute();
+    }
+    
+    
+      public function deleteCompetence($id){
+        $query = $this->db->prepare("DELETE FROM competence WHERE idCompetence = ".$id);
+        $query->execute();      
     }
 }

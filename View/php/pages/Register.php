@@ -35,7 +35,7 @@ include '../template/HeaderUnLog.php';
                             <div id="erreur" class="error_log">
                                 <p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
                             </div>
-                            <form action="/Controller/Register.php" method="post">
+                            <form action="../../../Controller/Register.php" method="post">
                                 <div class="form-group input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>

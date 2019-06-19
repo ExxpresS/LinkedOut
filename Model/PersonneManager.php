@@ -66,6 +66,7 @@ class PersonneManager extends DBConnection
    */
     public function insertUnePersonne($nom, $prenom, $description, $telephone, $mail, $mdp)
     {
+        $mdp = hash('sha256', $mdp);
         $description = ($description == NULL)?"NULL" : $description;
         $requete = "INSERT INTO personne set `nom` = '".$nom."' ,`prenom` = '".$prenom."',`description` = '".$description."',`telephone` = '".$telephone."',`mail` = '".$mail."',`mdp` = '".$mdp."'";
         $query = $this->db->prepare($requete);
