@@ -1,85 +1,13 @@
-<div class="container">
-	<div class="row">
-		
-		<div class="col-md-12">
-		    <div class="card">
-		        <div class="card-body">
-		            <div class="row">
-		                <div class="col-md-12">
-		                    <h4>Your Profile</h4>
-		                    <hr>
-		                </div>
-		            </div>
-		            <div class="row">
-		                <div class="col-md-12">
-		                    <form>
-                              <div class="form-group row">
-                                <label for="username" class="col-4 col-form-label">User Name*</label> 
-                                <div class="col-8">
-                                  <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="name" class="col-4 col-form-label">First Name</label> 
-                                <div class="col-8">
-                                  <input id="name" name="name" placeholder="First Name" class="form-control here" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="lastname" class="col-4 col-form-label">Last Name</label> 
-                                <div class="col-8">
-                                  <input id="lastname" name="lastname" placeholder="Last Name" class="form-control here" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="text" class="col-4 col-form-label">Nick Name*</label> 
-                                <div class="col-8">
-                                  <input id="text" name="text" placeholder="Nick Name" class="form-control here" required="required" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="select" class="col-4 col-form-label">Display Name public as</label> 
-                                <div class="col-8">
-                                  <select id="select" name="select" class="custom-select">
-                                    <option value="admin">Admin</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="email" class="col-4 col-form-label">Email*</label> 
-                                <div class="col-8">
-                                  <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="website" class="col-4 col-form-label">Website</label> 
-                                <div class="col-8">
-                                  <input id="website" name="website" placeholder="website" class="form-control here" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="publicinfo" class="col-4 col-form-label">Public Info</label> 
-                                <div class="col-8">
-                                  <textarea id="publicinfo" name="publicinfo" cols="40" rows="4" class="form-control"></textarea>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="newpass" class="col-4 col-form-label">New Password</label> 
-                                <div class="col-8">
-                                  <input id="newpass" name="newpass" placeholder="New Password" class="form-control here" type="text">
-                                </div>
-                              </div> 
-                              <div class="form-group row">
-                                <div class="offset-4 col-8">
-                                  <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                                </div>
-                              </div>
-                            </form>
-		                </div>
-		            </div>
-		            
-		        </div>
-		    </div>
-		</div>
-	</div>
+<link rel="stylesheet" href="../../css/Resume.css">
+<div>
+    <div class="">
+        <img class="img-circle "
+             src="data:image/jpeg;base64,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"
+             alt="Grapefruit slice atop a pile of other slices" />
+    </div>
+    
+    <div class="float-left"> 
+        <p class="title-cv">TIRTRE TITRE</p>
+    </div>
+    
 </div>

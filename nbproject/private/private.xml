@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Projets/LinkedOut/View/php/pages/accueil.php</file>
-            <file>file:/D:/Projets/LinkedOut/Controller/Ajax.php</file>
+            <file>file:/D:/Projets/LinkedOut/View/php/template/LeftMenu.php</file>
             <file>file:/D:/Projets/LinkedOut/View/php/pages/Admin.php</file>
             <file>file:/D:/Projets/LinkedOut/Model/PersonneManager.php</file>
-            <file>file:/D:/Projets/LinkedOut/js/AjaxFunctions.js</file>
+            <file>file:/D:/Projets/LinkedOut/js/exo.php</file>
+            <file>file:/D:/Projets/LinkedOut/js/mainExo.js</file>
+            <file>file:/D:/Projets/LinkedOut/View/css/Resume.css</file>
             <file>file:/D:/Projets/LinkedOut/Controller/GetUserInfos.php</file>
+            <file>file:/D:/Projets/LinkedOut/View/php/template/MonProfil.php</file>
+            <file>file:/D:/Projets/LinkedOut/js/scriptExo.js</file>
+            <file>file:/D:/Projets/LinkedOut/View/php/pages/MonProfil.php</file>
+            <file>file:/D:/Projets/LinkedOut/View/php/template/NavBar.php</file>
         </group>
     </open-files>
 </project-private>

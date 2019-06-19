@@ -62,7 +62,7 @@ function updateUser(id, nom, prenom, tel, mail, pass) {
 //              Competence
 ///////////////////////////////////////////////
     function getCompetence() {
-        
+        alert("sssssssssssssssssssssssssssss");
         /*
     $.ajax({
         type: "POST",

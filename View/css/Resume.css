@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 juin 2019, 16:41:09
+    Author     : Pierre
+*/
+
+.img-circle{
+    border-radius: 50%;
+}
+.img{
+    width: 100%;
+}
+.title-cv{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4em;
+    color: #444444;
+}
+
+.float-left{
+    float:left;
+}
