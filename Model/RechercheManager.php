@@ -46,15 +46,9 @@ class RechercheManager extends DBConnection
    * @param [String] $mdp
    * @return void
    */
-    public function insertUneRecherche($domaine, $poste, $description, $date, $typeEmploi, $idEtudiant)
+    public function insertUneRecherche($domaine, $poste, $description, $typeEmploi)
     {
-        $query = $this->db->prepare("INSERT INTO Recherche set `domaine` = :domaine ,`poste` = :poste,`description` = :description,`date` = :date, `typeEmploi` = :typeEmploi, `idEtudiant` = :idEtudiant");
-        $query->bindValue(":idRecherche", $domaine);
-        $query->bindValue(":idRecherche", $poste);
-        $query->bindValue(":idRecherche", $description);
-        $query->bindValue(":idRecherche", $date);
-        $query->bindValue(":idRecherche", $typeEmploi);
-        $query->bindValue(":idRecherche", $idEtudiant);
+        $query = $this->db->prepare("INSERT INTO Recherche set `domaine` = $domaine ,`poste` = $poste,`description` = $description,`typeEmploi` = $typeEmploi");
         $query->execute();
     } 
     /**

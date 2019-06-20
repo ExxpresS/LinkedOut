@@ -76,7 +76,8 @@ echo $table;
 /******************************************
  *          Annonce
  *****************************************/
-if($_POST['action'] == 'getAnnonce') {     
+if($_POST['action'] == 'getAnnonce') {    
+    console.log("dans annonce");
       $annonceManager = new AnnonceManager();
 
     $infosUsersDb = $annonceManager->getAllAnnonce();
