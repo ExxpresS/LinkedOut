@@ -2,16 +2,17 @@
     include $_SERVER['DOCUMENT_ROOT'].'/Model/RechercheManager.php';
     
     
+    
 function GetRecherchesInfos()
 {
-    $rechercheManager = new RechercheManager();
     
+    $rechercheManager = new RechercheManager();
     $infosRecherchesDb = $rechercheManager->getAllRecherche();
     $offre = "";
    
     foreach ($infosRecherchesDb as $value) {
         
-    $rechercheInfo = ' <div class="card gedf-card">
+    $rechercheInfo = ' <div class="card gedf-card" style="width : 60%; margin : auto">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-between align-items-center">
@@ -41,7 +42,7 @@ function GetRecherchesInfos()
         <div class="card-body">
             <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>' . $value->getDate() . '</div>
             <a class="card-link" href="#">
-                <h5 class="card-title">' . $value->getDescription() . '</h5>
+                <h5 class="card-title">' . $value->getDomaine() . '</h5>
             </a>
             <p class="card-text">
                 ' . $value->getDescription() . '

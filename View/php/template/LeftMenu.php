@@ -3,7 +3,7 @@
 
 <!-- <div class="content"> -->
     <div id="jquery-accordion-menu" class="jquery-accordion-menu">
-        <ul>
+        <ul style="color: white;">
             <li class="leftMenu" id="personne" onclick="getPersonne()" class="active"><a>Personne</a></li>
             <li class="leftMenu" id="annonce" onclick="getAnnonce()"><a>Annonce</a></li>
             <li class="leftMenu" id="competence" onclick="getCompetence()"><a>Competence</a></li>

@@ -13,7 +13,7 @@ function GetAnnoncesInfos()
    
     foreach ($infosAnnoncesDb as $value) {
         //var_dump($value);exit();
-    $annonceInfo = ' <div class="card gedf-card">
+    $annonceInfo = ' <div class="card gedf-card" style="width : 60%; margin : auto">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex justify-content-between align-items-center">
